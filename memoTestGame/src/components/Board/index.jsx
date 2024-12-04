@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { BoardContainer, Title, GridContainer} from './mixins'
+import { BoardContainer, Title, GridContainer, Button, ScreenModal} from './mixins'
 import {imagesCard, suffleArray} from '../../dataCard'
 import Card from '../Card'
+import Modal from '../Modal'
 
 
 const component = () => {
@@ -55,33 +56,52 @@ const component = () => {
                 if(firstCard.img === secondCard.img){
                     firstCard.matched = true;
                     secondCard.matched = true;
-                    setDisabled(false)
+                    setDisabled(false);
+                    setScore(score + 1);
                 }else{
                     setTimeout(() =>{
                         firstCard.flipped = false;
                         secondCard.flipped = false;
                         setCards(cards);
-                        setDisabled(false) 
-                    }, 750);
+                        setDisabled(false);
+                    }, 900);
                 }
-                //No sirve poner el set afuera, ya que el timeout se ejecuta por el tiempo. 
                 setFlippedCards([])
             }
             setCards(cards)
         }
+        if(cards.every(card => card.matched)){
+            setGameOver(true);
+            setDisabled(true);
+        }
         
+    }
+    const handleNewGame = () => {
+        setCards([]);
+        createBoard();
+        setScore(0);
+        setGameOver(false);
+        setDisabled(false);
     }
 
     return(
-        <BoardContainer>
-            <Title>MemorieTest</Title>
-            <GridContainer>
-                {cards.map(card => (
-                    <Card card= {card} key= {card.id} handleCardClick= {handleCardClick}/>
-                    ))
-                }
-            </GridContainer>
-        </BoardContainer>        
+        <>
+            {gameOver && (<ScreenModal/>)}
+            
+          <BoardContainer>
+                <Title>Memorie Game</Title>
+                <GridContainer>
+                    {cards.map(card => (
+                        <Card card= {card} key= {card.id} handleCardClick= {handleCardClick}/>
+                        ))
+                    }
+                </GridContainer>
+                <Button onClick={handleNewGame}>Reset</Button>
+                    
+            <Modal gameOver={gameOver} setGameOver={setGameOver} score={score} handleNewGame={handleNewGame}/>
+           </BoardContainer>
+        </>
+                
     );
 }
 

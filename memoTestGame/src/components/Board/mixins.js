@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
-const BoardContainer = styled.div`  
-    margin: 10px;
-    background-color: aliceblue;
-    display: flex;
-    align-items: center;
+const BoardContainer = styled.div`
+display  : flex ;
+align-items: center;
+flex-direction: column;
+
 `
 const Title = styled.h1`
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -15,6 +15,20 @@ const GridContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-
 `
-export {BoardContainer, Title, GridContainer}
+const Button = styled.button`
+    width: 100px;
+    height: 70px;
+    border-radius: 16px;
+    background-color: royalblue;
+    color: white;
+    font-size: 15px;
+`
+const ScreenModal = styled.div`
+    position: fixed;
+    inset: 0;
+    background-color: black;
+    opacity: 0.5;
+    z-index: -10;
+`
+export {BoardContainer, Title, GridContainer, Button, ScreenModal}

@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 const CardContainer = styled.div`
-  display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -16,7 +15,8 @@ const Card = styled.div`
     position: relative;
     width: 90px;
     height: 90px;
-    align-items: center;    
+    align-items: center; 
+    justify-content:center;
 `
 const Image = styled.img`
     width: 60px;
