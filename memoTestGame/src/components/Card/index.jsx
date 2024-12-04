@@ -1,15 +1,22 @@
-import { useState } from "react";
-import { CardContainer, Image } from "./mixins";
+import { CardContainer, Card, Image } from "./mixins";
+import FrontCard from '../../assets/frontCard.svg'
 
-const component = ({card}) => {
+const component = ({card, handleCardClick}) => {
+    return (
+     <CardContainer onClick={() => handleCardClick(card.id)}>
+        { !card.flipped ? 
+        <Card>
+            <Image src={FrontCard} alt={'frontCard'}></Image>
+        </Card>
+        :
+        <Card>
+            <Image src={card.img} alt={card.alt}></Image>
+        </Card>
+        }
+     </CardContainer>
 
-    return(
-        <CardContainer>
-            <div>
-                <Image src={card.img} alt={card.alt}></Image>
-            </div>
-        </CardContainer>
+        
     );
-}
+  };
 
 export default component;
