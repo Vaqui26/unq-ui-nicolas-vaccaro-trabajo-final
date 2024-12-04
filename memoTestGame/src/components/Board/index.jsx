@@ -1,15 +1,9 @@
 import { useEffect, useState } from "react";
 import { BoardContainer, Title, GridContainer} from './mixins'
-import {imagesCard} from '../../dataCard'
+import {imagesCard, suffleArray} from '../../dataCard'
 import Card from '../Card'
 
-const suffleArray = (array) => {
-    for (let i = array.length - 1; i > 0; i--) {
-      const randomIndex = Math.floor(Math.random() * (i + 1)); 
-      [array[i], array[randomIndex]] = [array[randomIndex], array[i]];
-    }
-    return array;
-  };
+
 const component = () => {
 
     const [cards, setCards] = useState([]);
@@ -17,7 +11,6 @@ const component = () => {
     const [score, setScore] = useState(0);
     const [gameOver, setGameOver] = useState(false);
     const [isDisabled, setDisabled] = useState(false);
-    const [loading, setLoading] = useState(false)
     
     const createBoard = () => {
         const duplicateCards = imagesCard.flatMap((img, i) => {
@@ -40,11 +33,7 @@ const component = () => {
     }
 
     useEffect(() => {
-        if(!loading){
-            setLoading(true);
-            createBoard();
-        }
-        setLoading(false);
+        createBoard();
     },[])
 
     const handleCardClick = (id) => {
