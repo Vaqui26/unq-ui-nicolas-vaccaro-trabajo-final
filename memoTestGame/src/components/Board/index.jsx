@@ -10,7 +10,7 @@ const component = () => {
     const [cards, setCards] = useState([]);
     const [flippedCards, setFlippedCards] = useState([]);
     const [score, setScore] = useState(0);
-    const [gameOver, setGameOver] = useState(false);
+    const [gameOver, setGameOver] = useState(true);
     const [isDisabled, setDisabled] = useState(false);
     
     const createBoard = () => {
@@ -86,9 +86,8 @@ const component = () => {
 
     return(
         <>
-            {gameOver && (<ScreenModal/>)}
-            
-          <BoardContainer>
+        <BoardContainer>
+        {gameOver && (<ScreenModal/>)}
                 <Title>Memorie Game</Title>
                 <GridContainer>
                     {cards.map(card => (
@@ -96,10 +95,9 @@ const component = () => {
                         ))
                     }
                 </GridContainer>
-                <Button onClick={handleNewGame}>Reset</Button>
-                    
+                <Button onClick={handleNewGame}>Reset</Button> 
             <Modal gameOver={gameOver} setGameOver={setGameOver} score={score} handleNewGame={handleNewGame}/>
-           </BoardContainer>
+           </BoardContainer>          
         </>
                 
     );

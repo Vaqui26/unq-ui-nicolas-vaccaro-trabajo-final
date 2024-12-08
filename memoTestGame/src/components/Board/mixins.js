@@ -4,8 +4,8 @@ const BoardContainer = styled.div`
 display  : flex ;
 align-items: center;
 flex-direction: column;
-
 `
+
 const Title = styled.h1`
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: midnightblue;
@@ -14,7 +14,6 @@ const Title = styled.h1`
 const GridContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
 `
 const Button = styled.button`
     width: 100px;
@@ -23,6 +22,9 @@ const Button = styled.button`
     background-color: royalblue;
     color: white;
     font-size: 15px;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.05);}
 `
 const ScreenModal = styled.div`
     position: fixed;
