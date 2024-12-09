@@ -1,26 +1,21 @@
 import styled from 'styled-components'
 
 const CardContainer = styled.div`
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     border-radius: 6px;
-    gap: 10px;
-    padding: 10px;
+    background-color: #c3e9c1;
     &:hover {
     transform: scale(1.05);
   }
 `
 const Card = styled.div`
-    position: relative;
-    width: 90px;
-    height: 90px;
-    align-items: center; 
-    justify-content:center;
+    width: 50px;
+    height: 50px;
+    padding: 6px;
 `
 const Image = styled.img`
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     object-fit: cover;
 `
 export {CardContainer,Card, Image }

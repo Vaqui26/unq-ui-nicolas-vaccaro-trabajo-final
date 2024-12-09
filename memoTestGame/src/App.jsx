@@ -4,11 +4,13 @@ import GameBoard from './components/GameBoard';
 import { useGameContext } from './context/gameContext';
 
 const App = () => {
-  const { gameStarted } = useGameContext();
+  const { gameState } = useGameContext();
 
   return (
     <>
-      {gameStarted ? <GameBoard /> : <Menu />}
+      {gameState === 'Menu' ? <Menu/> : ''}
+      {gameState === 'Start' ? <GameBoard/> : ''}
+      {gameState === 'Win' ? <div>Ganaste!!!</div> : ''}
     </>
       
   );

@@ -1,24 +1,4 @@
 import styled from 'styled-components'
-import Fondo from '../../assets/images/fondoMemoGame.jpg'
-
-const BackGround = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 16px;
-  background-image: url(${Fondo});
-  background-size: cover;
-`
-const ContainerMenu = styled.div`
-  text-align: center;
-  background-color: white;
-  width: 600px;
-  height: 700px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
 
 const Title = styled.h1`
   font-size: 50px;
@@ -57,4 +37,4 @@ const ButtonStart = styled.button`
   }
 `
 
-export { BackGround, ContainerMenu, Title, MiniTitle, Button, ButtonStart}
+export { Title, MiniTitle, Button, ButtonStart}
