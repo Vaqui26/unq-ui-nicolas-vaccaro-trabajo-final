@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useGameContext } from '../../context/gameContext';
-import { Container, Title, Button} from './mixins'
+import { BodyMenu, ContainerMenu, Title,MiniTitle, Button, ButtonStart} from './mixins'
 
 const Menu = () => {
     const { startGame } = useGameContext();
@@ -8,20 +8,19 @@ const Menu = () => {
     const [difficulty, setDifficulty] = useState('easy');
   
     return (
-      <Container>
+      <BodyMenu>
+      <ContainerMenu>
         <Title>MemoGame</Title>
-  
-        <h2>Modo de Juego</h2>
+        <MiniTitle>Modo de Juego</MiniTitle>
         <Button active={mode === 'single'} onClick={() => setMode('single')}>Un jugador</Button>
         <Button active={mode === 'multiplayer'} onClick={() => setMode('multiplayer')}>Dos jugadores</Button>
-  
-        <h2>Dificultad</h2>
+        <MiniTitle>Dificultad</MiniTitle>
         <Button active={difficulty === 'easy'} onClick={() => setDifficulty('easy')}>Fácil</Button>
         <Button active={difficulty === 'medium'} onClick={() => setDifficulty('medium')}>Medio</Button>
         <Button active={difficulty === 'hard'} onClick={() => setDifficulty('hard')}>Difícil</Button>
-  
-        <Button onClick={() => startGame(mode, difficulty)}>Iniciar Juego</Button>
-      </Container>
+        <ButtonStart onClick={() => startGame(mode, difficulty)}>Iniciar Juego</ButtonStart>
+      </ContainerMenu>
+      </BodyMenu>
     );
   };
   

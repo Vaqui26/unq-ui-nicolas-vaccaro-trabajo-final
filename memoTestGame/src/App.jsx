@@ -7,9 +7,10 @@ const App = () => {
   const { gameStarted } = useGameContext();
 
   return (
-    <div className="App">
+    <>
       {gameStarted ? <GameBoard /> : <Menu />}
-    </div>
+    </>
+      
   );
 };
 
