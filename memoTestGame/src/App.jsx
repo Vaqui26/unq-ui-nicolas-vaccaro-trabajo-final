@@ -1,10 +1,16 @@
-import Board from '../src/components/Board'
+import React from 'react';
+import Menu from './components/Menu';
+import GameBoard from './components/GameBoard';
+import { useGameContext } from './context/gameContext';
 
-function App() {
-  
+const App = () => {
+  const { gameStarted } = useGameContext();
+
   return (
-    <Board/>
-  )
-}
+    <div className="App">
+      {gameStarted ? <GameBoard /> : <Menu />}
+    </div>
+  );
+};
 
-export default App
+export default App;
