@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Fondo from '../../assets/images/fondoMemoGame.jpg'
 
-const BodyMenu = styled.div`
+const BackGround = styled.div`
   display: flex;
   justify-content: center;
   padding: 16px;
@@ -22,17 +22,18 @@ const ContainerMenu = styled.div`
 
 const Title = styled.h1`
   font-size: 50px;
-  color: #333;
+  color: #313032;
 `;
 const MiniTitle = styled.h1`
   font-size: 30px;
-  color: #333;
+  color: #313032;
 `;
 const Button = styled.button`
   margin: 10px;
   padding: 15px 20px;
   background-color: ${(props) => (props.active ? '#28a745' : '#007bff')};
   color: white;
+  font-size: 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -46,13 +47,14 @@ const ButtonStart = styled.button`
   padding: 15px 30px;
   background-color: #28a745;
   color: white;
+  font-size: 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 
   &:hover {
-    background-color: #FFE600;
+    background-color: #ff8333;
   }
 `
 
-export { BodyMenu, ContainerMenu, Title, MiniTitle, Button, ButtonStart}
+export { BackGround, ContainerMenu, Title, MiniTitle, Button, ButtonStart}
