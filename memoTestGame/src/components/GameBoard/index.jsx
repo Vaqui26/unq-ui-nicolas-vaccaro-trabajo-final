@@ -17,7 +17,7 @@ const GameBoard = () => {
       const duplicateCards = duplicateArrayCards(cardCount);
       const newCards = suffleArray(duplicateCards);
       setCards(setBodyCards(newCards));
-    }, [difficulty]);
+    }, []);
 
     const handleCardClick = (id) => {
 

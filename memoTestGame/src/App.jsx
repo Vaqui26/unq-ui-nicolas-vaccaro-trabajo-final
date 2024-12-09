@@ -1,6 +1,7 @@
 import React from 'react';
 import Menu from './components/Menu';
 import GameBoard from './components/GameBoard';
+import WinScreen from './components/WinScreen';
 import { useGameContext } from './context/gameContext';
 
 const App = () => {
@@ -10,7 +11,7 @@ const App = () => {
     <>
       {gameState === 'Menu' ? <Menu/> : ''}
       {gameState === 'Start' ? <GameBoard/> : ''}
-      {gameState === 'Win' ? <div>Ganaste!!!</div> : ''}
+      {gameState === 'Win' ? <WinScreen/> : ''}
     </>
       
   );
