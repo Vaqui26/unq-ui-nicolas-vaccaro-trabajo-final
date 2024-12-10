@@ -22,7 +22,7 @@ Por ultimo, sin cerrar la terminal, debera bajarse los `paquetes` del proyecto. 
 
 ## Levantar el Proyecto:
 
-Si seguiste todas las instrucciones correctamente. Estando abierta la terminar, deberas ejecutar el siguiente comando :
+Si seguiste todas las instrucciones correctamente. Estando abierta la terminal, deberas ejecutar el siguiente comando :
 
 `npm run dev`
 
