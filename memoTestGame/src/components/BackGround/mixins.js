@@ -12,7 +12,7 @@ const Container = styled.div`
   text-align: center;
   background-color: white;
   width: 600px;
-  height: 700px;
+  height: 800px;
   border-radius: 10px;
   padding: 10px;
   display: flex;

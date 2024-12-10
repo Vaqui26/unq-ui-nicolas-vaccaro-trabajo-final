@@ -1,22 +1,20 @@
 import styled from "styled-components";
 
 const Title = styled.p`
-    font-family: 'Poppins';
     font-size: 50px;
-    color : #65dc35;
+    color : #2bc41c;
 `
 const TextScore = styled.p`
-    font-family: 'Monterray';
-    font-size: 25px;
+    font-weight: 400;
+    line-height: 28px;
+    font-size: 30px;
 `
 const Image = styled.img`
-    width: 200px;
-    height: 200px;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
 `
 const ScoreContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
 `
 const ButtonBack = styled.button`
   margin: 10px;

@@ -6,7 +6,7 @@ import BackGround from '../BackGround';
 
 const WinScreen = () => {
 
-    const { resetGame, mode } = useGameContext();
+    const { resetGame, mode, playerWin, score, difficulty } = useGameContext();
 
     return(
         
@@ -16,11 +16,11 @@ const WinScreen = () => {
             <ScoreContainer>
             { mode === 'multiplayer' ? 
             <>  
-                <TextScore>Puntuacion:</TextScore>
-                <TextScore>8</TextScore>
+                <TextScore>Ganador : Jugador{playerWin}</TextScore>
+                <TextScore>Puntuacion Total : {score}</TextScore>
             </>
             :
-            <TextScore>Ganaste SinglePlayer</TextScore>
+            <TextScore>Ganaste el nivel {difficulty}</TextScore>
             }
             </ScoreContainer>
             <ButtonBack onClick={() => resetGame()}>Volver al Menu</ButtonBack>
