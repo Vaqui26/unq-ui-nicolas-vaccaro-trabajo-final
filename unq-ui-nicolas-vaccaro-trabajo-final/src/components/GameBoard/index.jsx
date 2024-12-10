@@ -84,7 +84,7 @@ const GameBoard = () => {
           <p>Turno de : Jugador{turn}</p>
           </TurnIndicator>
         </ScoreBody>
-        : <Title>Single Game</Title>
+        : <Title>Juego de la Memoria</Title>
         }
         <Grid lengthCards={cards.length}>
           {cards.map((card, index) => (
