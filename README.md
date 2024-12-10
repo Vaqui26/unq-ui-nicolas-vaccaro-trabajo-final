@@ -48,7 +48,7 @@ Las cartas tendra tematica de **animales**.
 `Facil` (tablero de 4x4)
 `Medio` (tablero de 6x6)
 `Dificil` (tablero de 8x8)
- -Por predeterminado, el nivel seleccionado es `Facil`.
+ - Por predeterminado, el nivel seleccionado es `Facil`.
 
 ### Un Jugador
 
@@ -60,6 +60,7 @@ Las cartas tendra tematica de **animales**.
  - Al ser dos jugadores, el objetivo final sigue siendo el mismo. Pero donde habra un ganador.
  - Tambien se permite un nivel de dificultad.
  - El ganador sera definido por puntos. Estos puntos se ganan por cada cantidad de pares acertados en el tablero.
- - Cada juego tendra un turno para seleccionar cartas. En caso de que el jugador acierte el par, este podra seguir seleccionando para sumar puntos.
+ - Cada juego tendra un turno para seleccionar un par de cartas. En caso de que el jugador acierte el par, este podra seguir seleccionando para sumar puntos.
+ - Si al seleccionar un par, no coinciden, el turno pasara al otro jugador. 
  - En caso de ambos terminen con la misma puntuacion, el ganador sera aquel que haya tenido mas puntos antes del que el otro jugador lo empate. Ejemplo : 
- Si el jugador1 tenia 4 puntos, y el jugador2 tiene 3 puntos, este ultimo al levantar el ultimo par del tablero lo empata. El jugador1 sera el ganador. 
+ Si el jugador1 tenia 4 puntos, y el jugador2 tiene 3 puntos. El jugador2 al levantar el ultimo par del tablero lo empata. El jugador1 sera el ganador. 
