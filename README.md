@@ -58,7 +58,7 @@ Las cartas tendra tematica de **animales**.
 ### Dos Jugadores
 
  - Al ser dos jugadores, el objetivo final sigue siendo el mismo. Pero donde habra un ganador.
- - Tambien se permite un nivel de dificultad.
+ - Tambien se permite elejir un nivel de dificultad.
  - El ganador sera definido por puntos. Estos puntos se ganan por cada cantidad de pares acertados en el tablero.
  - Cada juego tendra un turno para seleccionar un par de cartas. En caso de que el jugador acierte el par, este podra seguir seleccionando para sumar puntos.
  - Si al seleccionar un par, no coinciden, el turno pasara al otro jugador. 
